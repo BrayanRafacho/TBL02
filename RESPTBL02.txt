@@ -1,0 +1,35 @@
+1. Polimorfismo
+Tratar objetos diferentes através de uma mesma referência genérica da classe pai. Mesma chamada de método, comportamentos específicos para cada filho.
+
+2. virtual
+Autoriza a sobrescrita. O método na classe pai tem um código padrão, mas deixa o filho mudar se quiser (opcional).
+
+3. override
+Substitui. É a palavra usada na classe filha para redefinir o método do pai (virtual ou abstract).
+
+4. Chamada via Referência Base (Pai p = new Filho())
+Executa o código do Filho (objeto real na memória), não do Pai.
+
+5. Interface vs. Classe
+Classe (Herança): O que o objeto É. Herda código, atributos e estado. (Herança única).
+
+Interface: O que o objeto FAZ. Contrato puro de comportamento, sem estado/atributos. (Múltipla).
+
+6. Por que Abstrata não dá new?
+Porque é um modelo incompleto. Se tivesse um método abstrato (sem código) e você chamasse, o programa quebraria.
+
+7. Método Concreto vs. Abstrato
+Concreto: Tem bloco de código { }.
+
+Abstrato: Só tem a assinatura/assinatura sem { }.
+
+8. virtual vs. abstract
+virtual: Tem código. O filho altera se quiser.
+
+abstract: Sem código. O filho é obrigado a implementar.
+
+9. Por que List<Pai> aceita Filho?
+Porque o Filho é um Pai. Polimorfismo permite armazenar qualquer derivado sob o tipo da base.
+
+10. Vantagem em Sistemas Grandes
+Baixo acoplamento e fácil extensão (Open/Closed Principle). Você adiciona novas funcionalidades/classes sem ter que alterar ou quebrar o código antigo que já funciona.
